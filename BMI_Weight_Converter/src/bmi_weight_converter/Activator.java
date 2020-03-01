@@ -13,6 +13,7 @@ public class Activator implements BundleActivator {
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(BundleContext context) throws Exception {
+		//Start method
 		System.out.println("BMI_Weight_Converter => Start");
 		WeightService weightService = new WeightServiceImple();
 		publishServiceRegistration = context.registerService(WeightService.class.getName(), weightService, null);
